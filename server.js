@@ -18,8 +18,12 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // ================================
 // ✅ Endpoint test
 // ================================
-app.get("/", (req, res) => {
-  res.send("✅ CalmaAI Backend funcionando");
+
+app.get("/api/analyze", (req, res) => {
+  res.json({
+    ok: true,
+    message: "Backend activo. Usá POST con JSON {text:...}"
+  });
 });
 
 // ================================
