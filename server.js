@@ -48,10 +48,9 @@ app.post("/api/analyze", async (req, res) => {
     console.log("📩 Texto recibido:", userText);
 
     // Modelo recomendado
-    const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
-    });
-
+   const model = genAI.getGenerativeModel({
+  model: "gemini-pro"
+});
     // Prompt emocional argentino
     const prompt = `
 Sos un asistente emocional argentino llamado CalmaAI.
